@@ -40,32 +40,35 @@
     <section class="sec-form">
       <h2>Siga o passo a passo!</h2>
 
-      <form action="" method="get">
+      <form action="" method="get" id="forms">
         <div class="card">
-          <label for=passo1"> Passo 1 - Tempo diário para o projeto</label>
+          <label for="horasDiarias"> Passo 1 - Tempo diário para o projeto</label>
           <p>No seu dia, quantas horas você consegue disponibilizar para seguir com o projeto?</p>
-          <input type="number" name="" id="passo1" min="1" max="24" placeholder="No minimo 1 no máximo 24h">
+          <input type="number" name="" id="horasDiarias" min="1" max="24" placeholder="No minimo 1 no máximo 24h"
+            required>
 
         </div>
         <div class="card">
-          <label for="passo2"> Passo 2 - Dias efetivos trabalhando</label>
+          <label for="diasEfetivos"> Passo 2 - Dias efetivos trabalhando</label>
           <p>Durante a sua semana, quantos dias você consegue reservar para o projeto?</p>
-          <input type="number" name="" id="passo2" min="1" max="7" placeholder="No minimo 1 no máximo 7 dias">
+          <input type="number" name="" id="diasEfetivos" min="1" max="7" placeholder="No minimo 1 no máximo 7 dias"
+            required>
         </div>
         <div class="card">
-          <label for="passo3"> Passo 3 - Dias de Férias por projeto</label>
+          <label for="diasFerias"> Passo 3 - Dias de Férias por projeto</label>
           <p>Assim como em qualquer tipo de projetos no freela também temos férias.
             Quantas semanas você quer tirar de férias do projeto?</p>
-          <input type="number" name="" id="passo3" min="0" max="52" placeholder="No minimo 0 no máximo 52 semanas">
+          <input type="number" name="" id="diasFerias" min="0" max="52" placeholder="No minimo 0 no máximo 52 semanas"
+            required>
         </div>
         <div class="card">
-          <label for="passo4"> Passo 4 - Valor total do Projeto</label>
+          <label for="valorProjeto"> Passo 4 - Valor total do Projeto</label>
           <p>Não podemos esquecer do principal fator que é o total a ser recebido pelo freela. A partir desse valor, do
             <span> quanto você desejaria ganhar em cima do trabalho</span>, é feito o cálculo maior.</p>
-          <input type="text" name="" id="passo4" placeholder="O valor que você deseja ganhar no projeto">
+          <input type="text" name="" id="valorProjeto" placeholder="O valor que você deseja ganhar no projeto" required>
         </div>
-        <div class=" cardbutton ">
-          <button type="submit">Calcular</button>
+        <div class=" cardbutton -position">
+          <input type="submit" id="buttonCalcular" onclick="handleClick()">Calcular</button>
         </div>
 
 
