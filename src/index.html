@@ -4,12 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Freela - He4rtDevs</title>
-    <link rel="stylesheet" href="./main.css" />
+    <!-- fontes -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div>
-      <h1>Olá mundo.</h1>
-    </div>
+    <header class="header-page">
+      <img src="img/logo-hearts.png" alt="logo com o nome da hearts dev e a imagem">
+      <h1>Calculadora de Freelas</h1>
+    </header>
+    <main>
+      <section class="sec-intro">
+        <p>
+          Pintou um novo <span class="underlined">freela</span> e você não tem noção como deve
+          cobrar pelo serviço?
+        </p>
+        <p>
+          Fica tranquilo com a <span class="underlined" >Calculadora de Freelas</span> você
+          descobrirá o quanto deve cobrar por sua hora profissional!
+        </p>
+        <p>
+          Siga os passos para calcularmos com sucesso quanto deverá valer a sua
+          hora trabalhada
+        </p>
+      </section>
+      <section class="sec-form">
+        <p>
+          <h2></h2>
+
+          <form action="">
+            <fieldset class="fieldset-start">
+              <legend>Vamos lá, siga os passos para calcular sua hora!</legend>
+                <fieldset class="step-fieldset">
+                  <legend>Passo 1 - Tempo diário investido no projeto</legend>
+                  <p>
+                    Quanto tempo diário (em horas) você disponibilizará e
+                    investirá no projeto do freela em questão??
+                  </p>
+                  <p>
+                    Horas diárias disponiveis:
+                    <input type="number" name="quantidade" id="" min="1" max="24" />
+                  </p>
+                </fieldset>
+                <fieldset class="step-fieldset">
+                  <legend>Passo 2 - Dias efetivos trabalhando no projeto</legend>
+                  <p>
+                    Quantos dias da sua semana você está disposto a disponibilizar para trabalhar no projeto? 
+                    Lembre-se que não há garantias que você consiga trabalhar todos os dias, mas você pode estipular 
+                    uma quantidade de dias que você tenha certeza que conseguirá trabalhar no projeto.
+                  </p>
+                  <p>
+                    Dias disponiveis semanalmente:
+                    <input type="number" name="quantidade" id="" min="1" max="7" />
+                  </p>
+                </fieldset>
+                <fieldset class="step-fieldset">
+                  <legend>Passo 3 - Semanas de férias do projeto</legend>
+                  <p>
+                    Assim como em qualquer modalidade de trabalho, no freelancer você também pode reservar um tempinho
+                    para suas tão merecidas férias. Tendo em vista quantas semanas por ano você gostaria de tirar de férias?
+                  </p>
+                  <p>
+                    Quantidade de semanas que tirarei de férias:
+                    <input type="number" name="quantidade" id="" min="1" max="52" />
+                  </p>
+                </fieldset>
+                <fieldset class="step-fieldset">
+                  <legend>Passo 4 - Valor total do projeto</legend>
+                  <p>
+                    Qual será o valor total do projeto? ou seja, quanto você recebererá por esse freela?
+                  </p>
+                  <p>
+                    Quanto eu receberei:
+                    <input type="text" name="" id="">
+                  </p>
+                </fieldset>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
     <script src="./main.js"></script>
   </body>
 </html>
