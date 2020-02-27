@@ -51,6 +51,9 @@ main {
 
   margin-right: 20px;
 
+  height: 640px;
+  width: 418px;
+
   /*   border: 2px solid none; */
   border-radius: 15px 50px;
   /*   box-shadow: 20px 10px #ecf6ff; */
@@ -58,7 +61,11 @@ main {
 
 .sec-intro p {
   line-height: 30px;
-  margin: 40px 30px;
+  margin: 30px 30px;
+}
+
+.sec-intro > .result {
+  font-weight: bold;
 }
 
 /* .sec-intro p:nth-child(2) {
@@ -75,15 +82,80 @@ main {
 }
 
 .sec-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
   box-sizing: border-box;
   background-color: #b9dfff;
-  padding: 20px;
+  border-radius: 15px 50px;
+
   margin-left: 20px;
+  height: 640px;
+  width: 1000px;
+  /* align-items: flex-end; */
 }
 
-.fieldset-start > legend {
+.sec-form > h2 {
+  margin-bottom: 10px;
   font-weight: bold;
-  font-size: 25px;
-  margin-bottom: 15px;
-  color: aliceblue;
+  font-size: 30px;
+  color: #002544;
+}
+.sec-form > form {
+  display: grid;
+  grid-template-columns: 450px 450px;
+  grid-template-rows: 200px 200px;
+}
+
+.sec-form .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ecf6ff;
+  border-radius: 20px;
+}
+
+.card:last-child {
+  position: relative;
+}
+.cardbutton button {
+  width: 400px;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #016abc;
+  position: relative;
+  left: 250px;
+}
+
+.card label {
+  font-weight: bold;
+  color: #002544;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+.card span {
+  font-weight: bold;
+}
+
+.card input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #002544;
 }
