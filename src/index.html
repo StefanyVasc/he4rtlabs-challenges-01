@@ -1,82 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Freela - He4rtDevs</title>
+    <!-- fontes -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora de Freela - He4rtDevs</title>
-  <!-- fontes -->
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet" />
+    <!-- estilos -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-  <!-- estilos -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/main.css" />
-</head>
+  <body>
+    <header class="header-page">
+      <img
+        src="img/logo-hearts.png"
+        alt="logo com o nome da hearts dev e a imagem"
+      />
+      <h1>Calculadora de Freelas</h1>
+    </header>
+    <main>
+      <section class="sec-intro">
+        <p>
+          Pintou um novo <span class="underlined">freela</span> e você não tem
+          noção como deve cobrar pelo serviço?
+        </p>
+        <p>
+          Fica tranquilo com a
+          <span class="underlined">Calculadora de Freelas</span> você descobrirá
+          o quanto deve cobrar por sua hora profissional!
+        </p>
+        <p>
+          Siga os passos para calcularmos com sucesso quanto deverá valer a sua
+          hora trabalhada
+        </p>
+      </section>
+      <section class="sec-form">
+        <h2>Siga o passo a passo!</h2>
 
-<body>
-  <header class="header-page">
-    <img src="img/logo-hearts.png" alt="logo com o nome da hearts dev e a imagem">
-    <h1>Calculadora de Freelas</h1>
-  </header>
-  <main>
-    <section class="sec-intro">
-      <p>
-        Pintou um novo <span class="underlined">freela</span> e você não tem noção como deve
-        cobrar pelo serviço?
-      </p>
-      <p>
-        Fica tranquilo com a <span class="underlined">Calculadora de Freelas</span> você
-        descobrirá o quanto deve cobrar por sua hora profissional!
-      </p>
-      <p>
-        Siga os passos para calcularmos com sucesso quanto deverá valer a sua
-        hora trabalhada
-      </p>
-      <div class="result">
-        <p>O valor da sua hora é: </p>
-      </div>
-    </section>
-    <section class="sec-form">
-      <h2>Siga o passo a passo!</h2>
+        <form action="" method="get" id="forms">
+          <div class="card">
+            <label for="horasDiarias">
+              Passo 1 - Tempo diário para o projeto</label
+            >
+            <p>
+              No seu dia, quantas horas você consegue disponibilizar para seguir
+              com o projeto?
+            </p>
+            <input
+              type="number"
+              name=""
+              id="horasDiarias"
+              min="1"
+              max="24"
+              placeholder="No minimo 1 no máximo 24h"
+              required
+            />
+          </div>
 
-      <form action="" method="get" id="forms">
-        <div class="card">
-          <label for="horasDiarias"> Passo 1 - Tempo diário para o projeto</label>
-          <p>No seu dia, quantas horas você consegue disponibilizar para seguir com o projeto?</p>
-          <input type="number" name="" id="horasDiarias" min="1" max="24" placeholder="No minimo 1 no máximo 24h"
-            required>
+          <div class="card">
+            <label for="diasEfetivos">
+              Passo 2 - Dias efetivos trabalhando</label
+            >
+            <p>
+              Durante a sua semana, quantos dias você consegue reservar para o
+              projeto?
+            </p>
+            <input
+              type="number"
+              name=""
+              id="diasEfetivos"
+              min="1"
+              max="7"
+              placeholder="No minimo 1 no máximo 7 dias"
+              required
+            />
+          </div>
 
+          <div class="card">
+            <label for="diasFerias">
+              Passo 3 - Dias de Férias por projeto</label
+            >
+            <p>
+              Assim como em qualquer tipo de projetos no freela também temos
+              férias. Quantas semanas você quer tirar de férias do projeto?
+            </p>
+            <input
+              type="number"
+              name=""
+              id="diasFerias"
+              min="0"
+              max="52"
+              placeholder="No minimo 0 no máximo 52 semanas"
+              required
+            />
+          </div>
+
+          <div class="card">
+            <label for="valorProjeto"> Passo 4 - Valor total do Projeto</label>
+            <p>
+              Não podemos esquecer do principal fator que é o total a ser
+              recebido pelo freela. A partir desse valor, do
+              <span> quanto você desejaria ganhar em cima do trabalho</span>, é
+              feito o cálculo maior.
+            </p>
+            <input
+              step="0.01"
+              type="number"
+              name=""
+              id="valorProjeto"
+              placeholder="Quanto você desejar ganhar?"
+              required
+            />
+          </div>
+
+          <div class=" cardbutton">
+            <input
+              class="btnCalcular"
+              type="submit"
+              id="buttonCalcular"
+              onclick="handleClick()"
+              value="Calcular"
+            />
+          </div>
+        </form>
+        <div class="result">
+          <p id="local"></p>
         </div>
-        <div class="card">
-          <label for="diasEfetivos"> Passo 2 - Dias efetivos trabalhando</label>
-          <p>Durante a sua semana, quantos dias você consegue reservar para o projeto?</p>
-          <input type="number" name="" id="diasEfetivos" min="1" max="7" placeholder="No minimo 1 no máximo 7 dias"
-            required>
-        </div>
-        <div class="card">
-          <label for="diasFerias"> Passo 3 - Dias de Férias por projeto</label>
-          <p>Assim como em qualquer tipo de projetos no freela também temos férias.
-            Quantas semanas você quer tirar de férias do projeto?</p>
-          <input type="number" name="" id="diasFerias" min="0" max="52" placeholder="No minimo 0 no máximo 52 semanas"
-            required>
-        </div>
-        <div class="card">
-          <label for="valorProjeto"> Passo 4 - Valor total do Projeto</label>
-          <p>Não podemos esquecer do principal fator que é o total a ser recebido pelo freela. A partir desse valor, do
-            <span> quanto você desejaria ganhar em cima do trabalho</span>, é feito o cálculo maior.</p>
-          <input type="text" name="" id="valorProjeto" placeholder="O valor que você deseja ganhar no projeto" required>
-        </div>
-        <div class=" cardbutton -position">
-          <input type="submit" id="buttonCalcular" onclick="handleClick()">Calcular</button>
-        </div>
-
-
-      </form>
-      </div>
-    </section>
-  </main>
-  <script src="./main.js"></script>
-</body>
-
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
 </html>
