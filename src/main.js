@@ -19,6 +19,5 @@ const calculando = () => {
     valorProjeto / (diasEfetivos * 4 * horasDiarias) +
     diasFerias * diasEfetivos * horasDiarias;
 
-  /* resultado.createElement("p"); */
   resultado.textContent = `O valor da sua hora é: R$${valorHora.toFixed(2)}`;
 };

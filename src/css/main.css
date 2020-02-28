@@ -1,10 +1,6 @@
-/* font-family: 'Quicksand', ;
-
-font-family: 'Playfair Display', ; */
-
 html {
   background-color: #002544;
-  /*   color: white; */
+
   font-size: 22px;
   font-family: "Quicksand", sans-serif;
 }
@@ -28,7 +24,6 @@ html {
   color: white;
   font-family: "Playfair Display";
   font-size: 50px;
-  /*   position: absolute; */
 }
 
 /* sections */
@@ -45,18 +40,12 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* align-items: flex-end; */
   box-sizing: border-box;
   background-color: #b9dfff;
-
   margin-right: 20px;
-
   height: 640px;
   width: 418px;
-
-  /*   border: 2px solid none; */
   border-radius: 60px;
-  /*   box-shadow: 20px 10px #ecf6ff; */
 }
 
 .sec-intro p {
@@ -80,9 +69,6 @@ main {
   box-sizing: border-box;
 }
 
-/* .sec-intro p:nth-child(2) {
-  margin: 50px 0;
-} */
 .sec-intro .underlined {
   box-shadow: 1px 0 0 0 #9163cc;
   background: #9163cc;
@@ -106,7 +92,6 @@ main {
   margin-left: 20px;
   height: 640px;
   width: 1000px;
-  /* align-items: flex-end; */
 }
 
 .sec-form > h2 {
