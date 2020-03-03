@@ -29,9 +29,8 @@ html {
 
 /* sections */
 
-main {
+.container {
   display: flex;
-  margin: auto;
   align-items: center;
   justify-content: center;
   margin: 50px 40px;
@@ -174,4 +173,172 @@ main {
 .pg-footer a {
   text-decoration: none;
   outline: none;
+}
+
+/* responsivos */
+
+@media (max-width: 1286px), (max-height: 952px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .container > .sec-intro {
+    width: 1200px;
+    height: 300px;
+    border: none;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .container > .sec-form {
+    width: 1200px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1002px) {
+  .sec-intro p {
+    line-height: 25px;
+    margin: 20px 20px;
+  }
+}
+
+@media (max-width: 996px) {
+  .container > .sec-form {
+    font-size: 16px;
+    margin: 18px 18px;
+  }
+
+  .sec-form > form {
+    grid-template-columns: 430px 430px;
+  }
+  .sec-intro p {
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 951px) {
+  .sec-form > form {
+    grid-template-columns: 400px 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sec-form > form {
+    grid-template-columns: 370px 370px;
+  }
+}
+
+@media (max-width: 840px) {
+  .sec-form {
+    height: 800px;
+  }
+  .sec-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .sec-form > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sec-form .card {
+    width: 600px;
+  }
+}
+
+@media (max-width: 720px) {
+  .sec-form .card {
+    width: 550px;
+  }
+
+  .header-page h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 668px) {
+  .sec-form .card {
+    width: 500px;
+  }
+}
+
+@media (max-width: 620px) {
+  .sec-form .card {
+    width: 400px;
+  }
+  .sec-form h2 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 545px) {
+  .header-page h1 {
+    font-size: 35px;
+  }
+
+  .header-page .logo {
+    height: 100px;
+  }
+}
+
+@media (max-width: 518px) {
+  .container > .sec-intro {
+    height: 320px;
+  }
+
+  .sec-form {
+    height: 1100px;
+  }
+  .sec-form .card {
+    width: 300px;
+    height: 170px;
+  }
+  .sec-form h2 {
+    margin-top: 20px;
+  }
+  .sec-intro p {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-page h1 {
+    font-size: 30px;
+  }
+  .header-page .logo {
+    height: 80px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container > .sec-intro {
+    height: 400px;
+  }
+  .sec-intro p {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 18px 18px;
+  }
+  .sec-form h2 {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .sec-form {
+    height: 1200px;
+  }
+  .sec-form .card {
+    width: 280px;
+    height: 200px;
+  }
+  .card .input-cards {
+    width: 260px;
+  }
 }
